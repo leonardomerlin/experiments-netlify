@@ -39,6 +39,7 @@ export default {
   justify-content: center;
   align-items: center;
   text-align: center;
+  filter: invert(100%);
 }
 
 .title {

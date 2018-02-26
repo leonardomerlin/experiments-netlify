@@ -1,6 +1,7 @@
 <template>
   <div>
     <nuxt/>
+    <footer>{{ getenv "BRANCH" }}</footer>
   </div>
 </template>
 
