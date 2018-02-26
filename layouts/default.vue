@@ -1,13 +1,23 @@
 <template>
   <div>
     <nuxt/>
-    <footer>{{ getenv "BRANCH" }}</footer>
+    <footer>{{ branch }}</footer>
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return { branch: process.env.BRANCH || "master" };
+  }
+};
+</script>
+
+
 <style>
 html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -17,7 +27,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   margin: 0;
 }
@@ -49,5 +61,10 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+footer {
+  font-size: 0.8em;
+  font-style: italic;
 }
 </style>
